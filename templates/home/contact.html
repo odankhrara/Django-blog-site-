@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}Blog.in {% endblock title %}
+{% block conatctactive %}active{% endblock conatctactive %}
+ {% block body %}
+
+
+<div class="container my-5">
+ <form method= 'POST' submit="/contect">
+ {% csrf_token %}
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1"name="email" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">name</label>
+    <input type="text" class="form-control" id="exampleInputEmail1"name="name" aria-describedby="emailHelp" placeholder="Enter name">
+    
+  </div>
+
+   <div class="form-group">
+    <label for="exampleFormControlTextarea1">issu</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" name = "issu" rows="3"></textarea>
+  </div>
+  
+  
+  <button type="submit" class="btn btn-primary my-3">Submit</button>
+ </form>
+
+ </div>
+ {% endblock body %}
+
+
+ 
